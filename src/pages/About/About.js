@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div style={{ padding: '2rem', textAlign: 'center' }}>
       <h1>ℹ️ About Page</h1>
-      <p>アバウトページ（仮）</p>
+      <p>This is the about page.</p>
     </div>
   );
 };
