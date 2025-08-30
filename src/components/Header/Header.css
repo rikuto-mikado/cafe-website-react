@@ -190,15 +190,41 @@
     gap: 0;
   }
 
-  .nav-item {
-    width: 100%;
-    border-bottom: 1px solid rgba(212, 165, 116, 0.2);
-  }
-
   .nav-link {
     display: block;
     padding: 1.2rem 0;
     font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+    margin: 0.2rem 0;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link:active,
+  .nav-link:focus {
+    background-color: rgba(212, 165, 116, 0.2);
+    color: #d4a574;
+    transform: scale(1.02);
+  }
+
+  .nav-link:active {
+    background-color: rgba(212, 165, 116, 0.3);
+    transform: scale(0.98);
+  }
+
+  .nav-link.active {
+    background-color: rgba(212, 165, 116, 0.25);
+    color: #d4a574;
+    font-weight: 600;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+    text-align: center;
+    padding: 0 1rem;
   }
 
   /* Hide the contact information */
