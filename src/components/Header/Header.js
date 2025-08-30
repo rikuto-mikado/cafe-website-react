@@ -23,7 +23,7 @@ const Header = () => {
         <header className="header">
             <div className="header-container">
                 {/* Logo section */}
-                <div className="logo-seciton">
+                <div className="logo-section">
                     <Link
                       to="/"
                       className="logo"
