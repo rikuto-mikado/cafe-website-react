@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaCoffee, FaLeaf, FaHeart, FaClock, FaMapMarkerAlt, FaStar } from 'react-icons/fa';
 import './Home.css';
+import cafeBackground from '../../assets/cafe-background.jpg';
 
 const Home = () => {
   const popularItems = [
@@ -35,7 +36,11 @@ const Home = () => {
     <div className="home">
       {/* Hero section */}
       <section className="hero-section">
-        <div className="hero-background"></div>
+        <div className="hero-background"
+        style={{
+          backgroundImage: `url(${cafeBackground})`
+          }}
+        ></div>
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <div className="container">
