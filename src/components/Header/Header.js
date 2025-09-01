@@ -48,7 +48,7 @@ const Header = () => {
                         <li className="nav-item">
                             <Link
                             to="/menu"
-                            className={`nav-link ${isActive(".menu") ? "active" : ""}`}
+                            className={`nav-link ${isActive("/menu") ? "active" : ""}`}
                             onClick={closeMobileMenu}>
                                 Menu
                             </Link>
