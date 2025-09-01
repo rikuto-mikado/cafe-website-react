@@ -270,3 +270,289 @@
     background-color: #2c1810;
     color: #fff;
 }
+
+.popular-menu-section .section-title {
+    color: #fff;
+}
+
+.popular-menu-section .section-title::after {
+    background: linear-gradient(90deg, #d4a574, #b8935f);
+}
+
+.popular-menu-section .section-subtitle {
+    color: #ccc;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3px;
+    margin-bottom: 4rem;
+}
+
+.menu-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.menu-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-image img {
+  transform: scale(1.1);
+}
+
+.rating {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(212, 165, 116, 0.9);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.star {
+    color: #ffd700;
+    font-size: 0.9rem;
+}
+
+.menu-content {
+    padding: 2rem;
+    color: #2c1810;
+}
+
+.menu-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #0e0e0e;
+}
+
+.menu-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.menu-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d4a574;
+}
+
+.add-to-cart-btn {
+    background: linear-gradient(135deg, #d4a574, #b8935f);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 165, 116, 0.4);
+}
+
+.menu-cta {
+    text-align: center;
+}
+
+/* Shop Information Section */
+.info-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8f6f0 0%, #fff 100%);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3px;
+}
+
+.info-card {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(44, 24, 16, 0.1);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(44, 24, 16, 0.15);
+}
+
+.info-icon {
+    font-size: 3rem;
+    color: #d4a574;
+    margin-bottom: 1.5rem;
+}
+
+.info-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2c1810;
+}
+
+.info-content p {
+    margin-bottom: 0.5rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* CTA section */
+.cta-section {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, #2c1810 0%, #3d2418 100%);
+    color: #fff;
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.cta-description {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    color: #ccc;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Responsible styles */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .btn {
+        width: 280px;
+        justify-content: center;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .features-grid,
+    .menu-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .cta-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-background {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+        letter-spacing: -0.01em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .features-section,
+    .popular-menu-section {
+        padding: 5rem 0;
+    }
+    
+    .menu-content {
+        padding: 1.5rem;
+    }
+    
+    .menu-footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
