@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaInstagram, FaTwitter, FaFacebook, FaPaperPlane, FaUser, FaCommentDots } from 'react-icons/fa';
+import './Contact.css';
+
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>📞 Contact Page</h1>
-      <p>This is the menu page.</p>
-    </div>
+    {/* Contact page content will go here */}   
   );
 };
 

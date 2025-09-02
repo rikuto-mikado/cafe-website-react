@@ -82,7 +82,7 @@
 
 /* Button styles */
 .btn {
-    display: inline-block;
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 1.2rem 2.5rem;
@@ -149,13 +149,14 @@
 
 .btn-outline {
     background-color: transparent;
-    color: #2c1810;
+    color: #d4a574;
     border-color: #d4a574;
 }
 
 .btn-outline:hover {
     background-color: #d4a574;
     color: #fff;
+    font-weight: 800;
 }
 
 .btn-large {

@@ -77,7 +77,7 @@ const Header = () => {
                 {/* Contact information */}
                 <div className="contact-info">
                     <FaPhone className="contact-icon" />
-                    <span className="contact-text">03-1234-5678</span>
+                    <span className="contact-text">03-0000-0000</span>
                 </div>
 
                 {/* Mobile menu button */}

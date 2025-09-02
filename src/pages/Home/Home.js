@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { FaCoffee, FaLeaf, FaHeart, FaClock, FaMapMarkerAlt, FaStar } from 'react-icons/fa';
 import './Home.css';
 import cafeBackground from '../../assets/cafe-background.jpg';
+import coffeeImage from '../../assets/coffee.jpg';
+import sandwichImage from '../../assets/sandwich.jpg';
+import matchaLatteImage from '../../assets/matcha-latte.jpg';
 
 const Home = () => {
   const popularItems = [
@@ -11,7 +14,7 @@ const Home = () => {
       name: "Signature Blend Coffee",
       description: "Our carefully crafted signature blend with hints of chocolate and vanilla",
       price: "¥480",
-      image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400",
+      image: coffeeImage,
       rating: 4.8
     },
     {
@@ -19,7 +22,7 @@ const Home = () => {
       name: "Croissant Sandwich",
       description: "Freshly baked croissant with premium ham and cheese",
       price: "¥680",
-      image: "https://images.unsplash.com/photo-1555507036-ab794f575c86?w=400",
+      image: sandwichImage,
       rating: 4.6
     },
     {
@@ -27,7 +30,7 @@ const Home = () => {
       name: "Matcha Latte",
       description: "Premium Japanese matcha with steamed milk and subtle sweetness",
       price: "¥520",
-      image: "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=400",
+      image: matchaLatteImage,
       rating: 4.9
     }
   ];
@@ -203,7 +206,7 @@ const Home = () => {
               <Link to="/contact" className="btn btn-primary btn-large">
                 Visit Our Cafe
               </Link>
-              <a href="tel:03-1234-5678" className="btn btn-secondary btn-large">
+              <a href="tel:03-0000-0000" className="btn btn-secondary btn-large">
                 Call to Reserve
               </a>
             </div>
