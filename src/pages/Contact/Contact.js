@@ -200,9 +200,9 @@ const Contact = () => {
                 </p>
               </div>
 
-              <div className="info-cards">
-                <div className="info-card">
-                  <div className="info-icon">
+              <div className="contact-info-cards">
+                <div className="contact-info-card">
+                  <div className="contact-info-icon">
                     <FaMapMarkerAlt />
                   </div>
                   <div className="info-content">

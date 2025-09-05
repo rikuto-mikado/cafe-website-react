@@ -266,14 +266,14 @@
 }
 
 /* Information cards */
-.info-cards {
+.contact-info-cards {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     margin-bottom: 3rem;
 }
 
-.info-card {
+.contact-info-card {
     background: #fff;
     padding: 2rem;
     border-radius: 15px;
@@ -289,7 +289,7 @@
     box-shadow: 0 15px 40px rgba(44, 24, 16, 0.12);
 }
 
-.info-icon {
+.contact-info-icon {
     width: 60px;
     height: 60px;
     background: linear-gradient(135deg, #d4a574, #b8935f);
@@ -302,18 +302,18 @@
     flex-shrink: 0;
 }
 
-.info-content {
+.contact-info-content {
     flex: 1;
 }
 
-.info-card-title {
+.contact-info-card-title {
     font-size: 1.2rem;
     font-weight: 600;
     color: #2c1810;
     margin-bottom: 0.8rem;
 }
 
-.info-text {
+.contact-info-text {
     color: #666;
     line-height: 1.6;
     margin-bottom: 0.8rem;
@@ -472,11 +472,11 @@
         gap: 1rem;
     }
     
-    .info-cards {
+    .contact-info-cards {
         gap: 1rem;
     }
     
-    .info-card {
+    .contact-info-card {
         padding: 1.5rem;
     }
     
@@ -507,7 +507,7 @@
         font-size: 1.8rem;
     }
     
-    .info-card {
+    .contact-info-card {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
