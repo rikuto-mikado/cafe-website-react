@@ -125,7 +125,7 @@ const Footer = () => {
                             <h4 className="footer-section-title">Contact Info</h4>
 
                             <div className="contact-item">
-                                <div className="contact-icon">
+                                <div className="footer-contact-icon">
                                     <FaMapMarkerAlt />
                                 </div>
                                 <div className="contact-details">
@@ -138,7 +138,7 @@ const Footer = () => {
                             </div>
 
                             <div className="contact-item">
-                                <div className="contact-icon">
+                                <div className="footer-contact-icon">
                                     <FaPhone />
                                 </div>
                                 <div className="contact-details">
@@ -150,7 +150,7 @@ const Footer = () => {
                             </div>
 
                             <div className="contact-item">
-                                <div className="contact-icon">
+                                <div className="footer-contact-icon">
                                     <FaEnvelope />
                                 </div>
                                 <div className="contact-details">
