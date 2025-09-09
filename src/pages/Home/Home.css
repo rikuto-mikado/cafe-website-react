@@ -150,7 +150,7 @@
 .btn-outline {
     background-color: transparent;
     color: #d4a574;
-    border-color: #d4a574;
+    border: 2px solid #d4a574;
 }
 
 .btn-outline:hover {

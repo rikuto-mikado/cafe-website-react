@@ -215,7 +215,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="info-card">
+                <div className="contact-info-card">
                   <div className="info-icon">
                     <FaPhone />
                   </div>
@@ -226,7 +226,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="info-card">
+                <div className="contact-info-card">
                   <div className="info-icon">
                     <FaEnvelope />
                   </div>
@@ -237,7 +237,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="info-card">
+                <div className="contact-info-card">
                   <div className="info-icon">
                     <FaClock />
                   </div>
