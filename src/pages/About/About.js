@@ -21,84 +21,29 @@ import gallery3Image from '../../assets/gallery3.jpg';
 import gallery4Image from '../../assets/gallery4.jpg';
 import gallery5Image from '../../assets/gallery5.jpg';
 import gallery6Image from '../../assets/gallery6.jpg';
+import aboutData from '../../data/aboutData.json';
+
+const imageMap = {
+  ownerImage,
+  barista1Image,
+  barista2Image,
+  gallery1Image,
+  gallery2Image,
+  gallery3Image,
+  gallery4Image,
+  gallery5Image,
+  gallery6Image
+};
+
+const iconMap = {
+  FaHeart: <FaHeart />,
+  FaLeaf: <FaLeaf />,
+  FaUsers: <FaUsers />,
+  FaAward: <FaAward />
+};
 
 const About = () => {
-  const value = [
-    {
-      icon: <FaHeart />,
-      title: "Passion",
-      description: "Every cup is crafted with love and dedication, ensuring the perfect coffee experience for our customers."
-    },
-    {
-      icon: <FaLeaf />,
-      title: "Sustainability",
-      description: "We source our beans ethically and use eco-friendly practices to protect our environment."
-    },
-    {
-      icon: <FaUsers />,
-      title: "Community",
-      description: "Building connections and creating a welcoming space where everyone feels at home."
-    },
-    {
-      icon: <FaAward />,
-      title: "Quality",
-      description: "We never compromise on quality, from our premium beans to our exceptional service."
-    },
-  ];
-
-  const team = [
-    {
-      name: "Hiroshi Tanaka",
-      role: "Owner & Head Barista",
-      bio: "With over 15 years of experience in the coffee industry, Hiroshi founded Cozy Cafe to share his passion for exceptional coffee.",
-      image: ownerImage
-    },
-    {
-      name: "Yuki Sato",
-      role: "Master Barista",
-      bio: "Yuki brings creativity and precision to every cup, specializing in latte art and specialty brewing methods.",
-      image: barista1Image
-    },
-    {
-      name: "Kenji Yamamoto",
-      role: "Pastry Chef",
-      bio: "Kenji creates our delicious pastries and desserts, using traditional techniques with modern flavors.",
-      image: barista2Image
-    }
-  ];
-
-  const testimonials = [
-    {
-      text: "Cozy Cafe has become my second home. The atmosphere is perfect for both work and relaxation, and the coffee is absolutely incredible!",
-      author: "Sarah Johnson",
-      title: "Regular Customer",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      text: "The attention to detail in every cup is remarkable. You can taste the passion and quality in every sip. Highly recommended!",
-      author: "Michael Chen",
-      title: "Coffee Enthusiast",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      text: "Not only is the coffee exceptional, but the staff always makes me feel welcome. It's the perfect neighborhood cafe.",
-      author: "Emma Wilson",
-      title: "Local Resident",
-      rating: 5,
-      avatar: "EW"
-    }
-  ];
-
-  const galleryItems = [
-    { image: gallery1Image, caption: "Our Cozy Interior" },
-    { image: gallery2Image, caption: "Fresh Pastries Daily" },
-    { image: gallery3Image, caption: "Expert Barista Skills" },
-    { image: gallery4Image, caption: "Premium Coffee Beans" },
-    { image: gallery5Image, caption: "Perfect Latte Art" },
-    { image: gallery6Image, caption: "Community Gathering" }
-  ];
+  const { value, team, testimonials, galleryItems } = aboutData;
 
   return (
     <div className="about">
@@ -160,7 +105,7 @@ const About = () => {
           <div className="values-grid">
             {value.map((item, index) => (
               <div key={index} className="value-card">
-                <div className="value-icon">{item.icon}</div>
+                <div className="value-icon">{iconMap[item.icon]}</div>
                 <h3 className="value-title">{item.title}</h3>
                 <p className="value-description">{item.description}</p>
               </div>
@@ -182,7 +127,7 @@ const About = () => {
             {team.map((member, index) => (
               <div key={index} className="team-card">
                 <div className="team-image">
-                  <img src={member.image} alt={member.name} />
+                  <img src={imageMap[member.image]} alt={member.name} />
                 </div>
                 <div className="team-content">
                   <h3 className="team-name">{member.name}</h3>
@@ -264,7 +209,7 @@ const About = () => {
           <div className="gallery-grid">
             {galleryItems.map((item, index) => (
               <div key={index} className="gallery-item">
-                <img src={item.image} alt={item.caption} />
+                <img src={imageMap[item.image]} alt={item.caption} />
                 <div className="gallery-overlay">
                   <div className="gallery-caption">
                     <FaCamera style={{ marginRight: '0.5rem' }} />

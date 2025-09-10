@@ -9,7 +9,6 @@ import {
   FaStar,
   FaFire,
   FaSnowflake,
-  FaSeedling,
   FaShoppingCart,
   FaPhone,
   FaMapMarkerAlt
@@ -24,9 +23,31 @@ import icedCoffeeImage from '../../assets/iced_coffee.jpg';
 import shortCakeImage from '../../assets/short-cake.jpg';
 import strawberryImage from '../../assets/strawberry_cake.jpg';
 import wheatBreadImage from '../../assets/wheat_bread.jpg';
+import menuData from '../../data/menuData.json';
+
+const imageMap = {
+  coffeeImage,
+  matchaLatteImage,
+  sandwichImage,
+  blackCoffeeImage,
+  cafeMochaImage,
+  chocolateCakeImage,
+  croissantImage,
+  icedCoffeeImage,
+  shortCakeImage,
+  strawberryImage,
+  wheatBreadImage
+};
+
+const iconMap = {
+  FaSnowflake: <FaSnowflake />,
+  FaLeaf: <FaLeaf />
+};
 
 const Menu = () => {
   const [activeFilter, setActiveFilter] = useState('all');
+
+  const { menuItems, popularItems, seasonalItems } = menuData;
 
   const categories = [
     { id: 'all', name: 'All Items', icon: <FaUtensils /> },
@@ -35,209 +56,6 @@ const Menu = () => {
     { id: 'pastries', name: 'Pastries', icon: <FaBreadSlice /> },
     { id: 'sandwiches', name: 'Sandwiches', icon: <FaUtensils /> },
     { id: 'drinks', name: 'Cold Drinks', icon: <FaGlassCheers /> }
-  ];
-
-  const menuItems = [
-    // Coffee
-    {
-      id: 1,
-      category: 'coffee',
-      name: 'Signature Blend',
-      description: 'Our house blend coffee with hints of chocolate and vanilla. Perfect for any time of day.',
-      price: '¥480',
-      image: coffeeImage,
-      tags: ['popular'],
-      rating: 4.8
-    },
-    {
-      id: 2,
-      category: 'coffee',
-      name: 'Single Origin Ethiopia',
-      description: 'Light roast coffee with bright, fruity notes and floral aroma from Ethiopian highlands.',
-      price: '¥680',
-      image: blackCoffeeImage,
-      tags: ['new'],
-      rating: 4.9
-    },
-    {
-      id: 3,
-      category: 'coffee',
-      name: 'Espresso Romano',
-      description: 'Traditional Italian espresso with a twist of lemon peel for a unique citrus finish.',
-      price: '¥420',
-      image: cafeMochaImage,
-      tags: [],
-      rating: 4.6
-    },
-    {
-      id: 4,
-      category: 'coffee',
-      name: 'Decaf Colombia',
-      description: 'Full-bodied decaffeinated coffee from Colombian mountains, smooth and rich.',
-      price: '¥520',
-      image: coffeeImage,
-      tags: ['decaf'],
-      rating: 4.4
-    },
-    
-    // Tea
-    {
-      id: 5,
-      category: 'tea',
-      name: 'Premium Matcha Latte',
-      description: 'Ceremonial grade matcha powder with steamed milk and a touch of sweetness.',
-      price: '¥620',
-      image: matchaLatteImage,
-      tags: ['popular', 'vegan'],
-      rating: 4.9
-    },
-    {
-      id: 6,
-      category: 'tea',
-      name: 'Earl Grey Supreme',
-      description: 'Classic Earl Grey tea blend with bergamot oil and cornflower petals.',
-      price: '¥380',
-      image: matchaLatteImage, // Placeholder
-      tags: [],
-      rating: 4.5
-    },
-    {
-      id: 7,
-      category: 'tea',
-      name: 'Chamomile Honey',
-      description: 'Relaxing chamomile tea with pure wildflower honey and dried apple pieces.',
-      price: '¥420',
-      image: matchaLatteImage, // Placeholder
-      tags: ['vegan'],
-      rating: 4.7
-    },
-
-    // Pastries
-    {
-      id: 8,
-      category: 'pastries',
-      name: 'Butter Croissant',
-      description: 'Flaky, buttery croissant baked fresh daily with French technique and premium butter.',
-      price: '¥320',
-      image: croissantImage,
-      tags: ['popular'],
-      rating: 4.8
-    },
-    {
-      id: 9,
-      category: 'pastries',
-      name: 'Chocolate Danish',
-      description: 'Rich chocolate-filled Danish pastry with a crispy exterior and smooth chocolate center.',
-      price: '¥420',
-      image: chocolateCakeImage,
-      tags: [],
-      rating: 4.6
-    },
-    {
-      id: 10,
-      category: 'pastries',
-      name: 'Seasonal Fruit Tart',
-      description: 'Fresh seasonal fruits on vanilla custard base with a crispy pastry shell.',
-      price: '¥580',
-      image: shortCakeImage,
-      tags: ['seasonal', 'new'],
-      rating: 4.9
-    },
-
-    // Sandwiches
-    {
-      id: 11,
-      category: 'sandwiches',
-      name: 'Club Sandwich',
-      description: 'Triple-decker sandwich with turkey, bacon, lettuce, tomato, and mayo on toasted bread.',
-      price: '¥780',
-      image: sandwichImage,
-      tags: ['popular'],
-      rating: 4.7
-    },
-    {
-      id: 12,
-      category: 'sandwiches',
-      name: 'Veggie Panini',
-      description: 'Grilled vegetables with mozzarella and pesto sauce pressed in artisan bread.',
-      price: '¥680',
-      image: wheatBreadImage,
-      tags: ['vegan'],
-      rating: 4.5
-    },
-
-    // Cold Drinks
-    {
-      id: 13,
-      category: 'drinks',
-      name: 'Iced Vanilla Latte',
-      description: 'Cold espresso with milk and vanilla syrup served over ice with whipped cream.',
-      price: '¥520',
-      image: icedCoffeeImage,
-      tags: ['popular'],
-      rating: 4.8
-    },
-    {
-      id: 14,
-      category: 'drinks',
-      name: 'Fresh Orange Juice',
-      description: 'Freshly squeezed orange juice from premium oranges, no additives or preservatives.',
-      price: '¥380',
-      image: strawberryImage, // Placeholder
-      tags: ['vegan'],
-      rating: 4.6
-    }
-  ];
-
-  const popularItems = [
-    {
-      id: 1,
-      name: 'Signature Blend Coffee',
-      description: 'Our house blend coffee with hints of chocolate and vanilla, loved by customers for over 8 years.',
-      price: '¥480',
-      image: coffeeImage,
-      rating: 4.8,
-      orders: '500+ orders this month'
-    },
-    {
-      id: 2,
-      name: 'Premium Matcha Latte',
-      description: 'Ceremonial grade matcha powder with perfectly steamed milk and artistic foam art.',
-      price: '¥620',
-      image: matchaLatteImage,
-      rating: 4.9,
-      orders: '300+ orders this month'
-    },
-    {
-      id: 3,
-      name: 'Butter Croissant',
-      description: 'Flaky, buttery croissant baked fresh every morning using traditional French techniques.',
-      price: '¥320',
-      image: croissantImage,
-      rating: 4.8,
-      orders: '200+ orders this month'
-    }
-  ];
-
-  const seasonalItems = [
-    {
-      name: 'Winter Spice Latte',
-      description: 'Warm spiced coffee with cinnamon, nutmeg, and a hint of orange zest',
-      price: '¥580',
-      icon: <FaSnowflake />
-    },
-    {
-      name: 'Pumpkin Spice Scone',
-      description: 'Seasonal scone with pumpkin puree and warm autumn spices',
-      price: '¥450',
-      icon: <FaLeaf />
-    },
-    {
-      name: 'Hot Chocolate Deluxe',
-      description: 'Rich Belgian chocolate with marshmallows and whipped cream',
-      price: '¥520',
-      icon: <FaSnowflake />
-    }
   ];
 
   const filteredItems = activeFilter === 'all' 
@@ -325,7 +143,7 @@ const Menu = () => {
                   {items.map(item => (
                     <div key={item.id} className="menu-item">
                       <div className="menu-item-image">
-                        <img src={item.image} alt={item.name} />
+                        <img src={imageMap[item.image]} alt={item.name} />
                       </div>
                       <div className="menu-item-content">
                         <div className="menu-item-header">
@@ -361,7 +179,7 @@ const Menu = () => {
                   {filteredItems.map(item => (
                     <div key={item.id} className="menu-item">
                       <div className="menu-item-image">
-                        <img src={item.image} alt={item.name} />
+                        <img src={imageMap[item.image]} alt={item.name} />
                       </div>
                       <div className="menu-item-content">
                         <div className="menu-item-header">
@@ -413,7 +231,7 @@ const Menu = () => {
             {popularItems.map(item => (
               <div key={item.id} className="popular-item">
                 <div className="popular-item-image">
-                  <img src={item.image} alt={item.name} />
+                  <img src={imageMap[item.image]} alt={item.name} />
                   <div className="popular-badge">
                     <FaFire />
                     Popular
@@ -459,7 +277,7 @@ const Menu = () => {
           <div className="seasonal-items">
             {seasonalItems.map((item, index) => (
               <div key={index} className="seasonal-item">
-                <div className="seasonal-icon">{item.icon}</div>
+                <div className="seasonal-icon">{iconMap[item.icon]}</div>
                 <h3 className="seasonal-item-name">{item.name}</h3>
                 <p className="seasonal-item-description">{item.description}</p>
                 <div className="seasonal-item-price">{item.price}</div>

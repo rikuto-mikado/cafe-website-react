@@ -1,0 +1,75 @@
+{
+  "value": [
+    {
+      "icon": "FaHeart",
+      "title": "Passion",
+      "description": "Every cup is crafted with love and dedication, ensuring the perfect coffee experience for our customers."
+    },
+    {
+      "icon": "FaLeaf",
+      "title": "Sustainability",
+      "description": "We source our beans ethically and use eco-friendly practices to protect our environment."
+    },
+    {
+      "icon": "FaUsers",
+      "title": "Community",
+      "description": "Building connections and creating a welcoming space where everyone feels at home."
+    },
+    {
+      "icon": "FaAward",
+      "title": "Quality",
+      "description": "We never compromise on quality, from our premium beans to our exceptional service."
+    }
+  ],
+  "team": [
+    {
+      "name": "Hiroshi Tanaka",
+      "role": "Owner & Head Barista",
+      "bio": "With over 15 years of experience in the coffee industry, Hiroshi founded Cozy Cafe to share his passion for exceptional coffee.",
+      "image": "ownerImage"
+    },
+    {
+      "name": "Yuki Sato",
+      "role": "Master Barista",
+      "bio": "Yuki brings creativity and precision to every cup, specializing in latte art and specialty brewing methods.",
+      "image": "barista1Image"
+    },
+    {
+      "name": "Kenji Yamamoto",
+      "role": "Pastry Chef",
+      "bio": "Kenji creates our delicious pastries and desserts, using traditional techniques with modern flavors.",
+      "image": "barista2Image"
+    }
+  ],
+  "testimonials": [
+    {
+      "text": "Cozy Cafe has become my second home. The atmosphere is perfect for both work and relaxation, and the coffee is absolutely incredible!",
+      "author": "Sarah Johnson",
+      "title": "Regular Customer",
+      "rating": 5,
+      "avatar": "SJ"
+    },
+    {
+      "text": "The attention to detail in every cup is remarkable. You can taste the passion and quality in every sip. Highly recommended!",
+      "author": "Michael Chen",
+      "title": "Coffee Enthusiast",
+      "rating": 5,
+      "avatar": "MC"
+    },
+    {
+      "text": "Not only is the coffee exceptional, but the staff always makes me feel welcome. It's the perfect neighborhood cafe.",
+      "author": "Emma Wilson",
+      "title": "Local Resident",
+      "rating": 5,
+      "avatar": "EW"
+    }
+  ],
+  "galleryItems": [
+    { "image": "gallery1Image", "caption": "Our Cozy Interior" },
+    { "image": "gallery2Image", "caption": "Fresh Pastries Daily" },
+    { "image": "gallery3Image", "caption": "Expert Barista Skills" },
+    { "image": "gallery4Image", "caption": "Premium Coffee Beans" },
+    { "image": "gallery5Image", "caption": "Perfect Latte Art" },
+    { "image": "gallery6Image", "caption": "Community Gathering" }
+  ]
+}

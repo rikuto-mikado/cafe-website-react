@@ -1,0 +1,190 @@
+{
+  "menuItems": [
+    {
+      "id": 1,
+      "category": "coffee",
+      "name": "Signature Blend",
+      "description": "Our house blend coffee with hints of chocolate and vanilla. Perfect for any time of day.",
+      "price": "¥480",
+      "image": "coffeeImage",
+      "tags": ["popular"],
+      "rating": 4.8
+    },
+    {
+      "id": 2,
+      "category": "coffee",
+      "name": "Single Origin Ethiopia",
+      "description": "Light roast coffee with bright, fruity notes and floral aroma from Ethiopian highlands.",
+      "price": "¥680",
+      "image": "blackCoffeeImage",
+      "tags": ["new"],
+      "rating": 4.9
+    },
+    {
+      "id": 3,
+      "category": "coffee",
+      "name": "Espresso Romano",
+      "description": "Traditional Italian espresso with a twist of lemon peel for a unique citrus finish.",
+      "price": "¥420",
+      "image": "cafeMochaImage",
+      "tags": [],
+      "rating": 4.6
+    },
+    {
+      "id": 4,
+      "category": "coffee",
+      "name": "Decaf Colombia",
+      "description": "Full-bodied decaffeinated coffee from Colombian mountains, smooth and rich.",
+      "price": "¥520",
+      "image": "coffeeImage",
+      "tags": ["decaf"],
+      "rating": 4.4
+    },
+    {
+      "id": 5,
+      "category": "tea",
+      "name": "Premium Matcha Latte",
+      "description": "Ceremonial grade matcha powder with steamed milk and a touch of sweetness.",
+      "price": "¥620",
+      "image": "matchaLatteImage",
+      "tags": ["popular", "vegan"],
+      "rating": 4.9
+    },
+    {
+      "id": 6,
+      "category": "tea",
+      "name": "Earl Grey Supreme",
+      "description": "Classic Earl Grey tea blend with bergamot oil and cornflower petals.",
+      "price": "¥380",
+      "image": "matchaLatteImage",
+      "tags": [],
+      "rating": 4.5
+    },
+    {
+      "id": 7,
+      "category": "tea",
+      "name": "Chamomile Honey",
+      "description": "Relaxing chamomile tea with pure wildflower honey and dried apple pieces.",
+      "price": "¥420",
+      "image": "matchaLatteImage",
+      "tags": ["vegan"],
+      "rating": 4.7
+    },
+    {
+      "id": 8,
+      "category": "pastries",
+      "name": "Butter Croissant",
+      "description": "Flaky, buttery croissant baked fresh daily with French technique and premium butter.",
+      "price": "¥320",
+      "image": "croissantImage",
+      "tags": ["popular"],
+      "rating": 4.8
+    },
+    {
+      "id": 9,
+      "category": "pastries",
+      "name": "Chocolate Danish",
+      "description": "Rich chocolate-filled Danish pastry with a crispy exterior and smooth chocolate center.",
+      "price": "¥420",
+      "image": "chocolateCakeImage",
+      "tags": [],
+      "rating": 4.6
+    },
+    {
+      "id": 10,
+      "category": "pastries",
+      "name": "Seasonal Fruit Tart",
+      "description": "Fresh seasonal fruits on vanilla custard base with a crispy pastry shell.",
+      "price": "¥580",
+      "image": "shortCakeImage",
+      "tags": ["seasonal", "new"],
+      "rating": 4.9
+    },
+    {
+      "id": 11,
+      "category": "sandwiches",
+      "name": "Club Sandwich",
+      "description": "Triple-decker sandwich with turkey, bacon, lettuce, tomato, and mayo on toasted bread.",
+      "price": "¥780",
+      "image": "sandwichImage",
+      "tags": ["popular"],
+      "rating": 4.7
+    },
+    {
+      "id": 12,
+      "category": "sandwiches",
+      "name": "Veggie Panini",
+      "description": "Grilled vegetables with mozzarella and pesto sauce pressed in artisan bread.",
+      "price": "¥680",
+      "image": "wheatBreadImage",
+      "tags": ["vegan"],
+      "rating": 4.5
+    },
+    {
+      "id": 13,
+      "category": "drinks",
+      "name": "Iced Vanilla Latte",
+      "description": "Cold espresso with milk and vanilla syrup served over ice with whipped cream.",
+      "price": "¥520",
+      "image": "icedCoffeeImage",
+      "tags": ["popular"],
+      "rating": 4.8
+    },
+    {
+      "id": 14,
+      "category": "drinks",
+      "name": "Fresh Orange Juice",
+      "description": "Freshly squeezed orange juice from premium oranges, no additives or preservatives.",
+      "price": "¥380",
+      "image": "strawberryImage",
+      "tags": ["vegan"],
+      "rating": 4.6
+    }
+  ],
+  "popularItems": [
+    {
+      "id": 1,
+      "name": "Signature Blend Coffee",
+      "description": "Our carefully crafted signature blend with hints of chocolate and vanilla",
+      "price": "¥480",
+      "image": "coffeeImage",
+      "rating": 4.8
+    },
+    {
+      "id": 2,
+      "name": "Croissant Sandwich",
+      "description": "Freshly baked croissant with premium ham and cheese",
+      "price": "¥680",
+      "image": "sandwichImage",
+      "rating": 4.6
+    },
+    {
+      "id": 3,
+      "name": "Matcha Latte",
+      "description": "Premium Japanese matcha with steamed milk and subtle sweetness",
+      "price": "¥520",
+      "image": "matchaLatteImage",
+      "rating": 4.9
+    }
+  ],
+  "seasonalItems": [
+    {
+      "name": "Winter Spice Latte",
+      "description": "Warm spiced coffee with cinnamon, nutmeg, and a hint of orange zest",
+      "price": "¥580",
+      "icon": "FaSnowflake"
+    },
+    {
+      "name": "Pumpkin Spice Scone",
+      "description": "Seasonal scone with pumpkin puree and warm autumn spices",
+      "price": "¥450",
+      "icon": "FaLeaf"
+    },
+    {
+      "name": "Hot Chocolate Deluxe",
+      "description": "Rich Belgian chocolate with marshmallows and whipped cream",
+      "price": "¥520",
+      "icon": "FaSnowflake"
+    }
+  ]
+}

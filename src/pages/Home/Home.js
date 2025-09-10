@@ -6,34 +6,16 @@ import cafeBackground from '../../assets/cafe-background.jpg';
 import coffeeImage from '../../assets/coffee.jpg';
 import sandwichImage from '../../assets/sandwich.jpg';
 import matchaLatteImage from '../../assets/matcha-latte.jpg';
+import menuData from '../../data/menuData.json';
+
+const imageMap = {
+  coffeeImage,
+  sandwichImage,
+  matchaLatteImage
+};
 
 const Home = () => {
-  const popularItems = [
-    {
-      id: 1,
-      name: "Signature Blend Coffee",
-      description: "Our carefully crafted signature blend with hints of chocolate and vanilla",
-      price: "¥480",
-      image: coffeeImage,
-      rating: 4.8
-    },
-    {
-      id: 2,
-      name: "Croissant Sandwich",
-      description: "Freshly baked croissant with premium ham and cheese",
-      price: "¥680",
-      image: sandwichImage,
-      rating: 4.6
-    },
-    {
-      id: 3,
-      name: "Matcha Latte",
-      description: "Premium Japanese matcha with steamed milk and subtle sweetness",
-      price: "¥520",
-      image: matchaLatteImage,
-      rating: 4.9
-    }
-  ];
+  const { popularItems } = menuData;
 
   return (
     <div className="home">
@@ -128,7 +110,7 @@ const Home = () => {
             {popularItems.map(item => (
               <div key={item.id} className="menu-card">
                 <div className="menu-image">
-                  <img src={item.image} alt={item.name} />
+                  <img src={imageMap[item.image]} alt={item.name} />
                   <div className="rating">
                     <FaStar className="star" />
                     {item.rating}
