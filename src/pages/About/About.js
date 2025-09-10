@@ -11,20 +11,16 @@ import {
   FaMapMarkerAlt
 } from 'react-icons/fa';
 import './About.css';
-
-// Photo gallery
-const PLACEHOLDER_IMAGES = {
-  story: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
-  owner: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80',
-  barista1: 'https://images.unsplash.com/photo-1494790108755-2616b8c2c6c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80',
-  barista2: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80',
-  gallery1: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80',
-  gallery2: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80',
-  gallery3: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80',
-  gallery4: 'https://images.unsplash.com/photo-1481833761820-0509d3217039?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80',
-  gallery5: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80',
-  gallery6: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80',
-};
+import storyImage from '../../assets/cafe-board.jpg';
+import ownerImage from '../../assets/human1.jpg';
+import barista1Image from '../../assets/human2.jpg';
+import barista2Image from '../../assets/human3.jpg';
+import gallery1Image from '../../assets/gallery1.jpg';
+import gallery2Image from '../../assets/gallery2.jpg';
+import gallery3Image from '../../assets/gallery3.jpg';
+import gallery4Image from '../../assets/gallery4.jpg';
+import gallery5Image from '../../assets/gallery5.jpg';
+import gallery6Image from '../../assets/gallery6.jpg';
 
 const About = () => {
   const value = [
@@ -55,19 +51,19 @@ const About = () => {
       name: "Hiroshi Tanaka",
       role: "Owner & Head Barista",
       bio: "With over 15 years of experience in the coffee industry, Hiroshi founded Cozy Cafe to share his passion for exceptional coffee.",
-      image: PLACEHOLDER_IMAGES.owner
+      image: ownerImage
     },
     {
       name: "Yuki Sato",
       role: "Master Barista",
       bio: "Yuki brings creativity and precision to every cup, specializing in latte art and specialty brewing methods.",
-      image: PLACEHOLDER_IMAGES.barista1
+      image: barista1Image
     },
     {
       name: "Kenji Yamamoto",
       role: "Pastry Chef",
       bio: "Kenji creates our delicious pastries and desserts, using traditional techniques with modern flavors.",
-      image: PLACEHOLDER_IMAGES.barista2
+      image: barista2Image
     }
   ];
 
@@ -96,12 +92,12 @@ const About = () => {
   ];
 
   const galleryItems = [
-    { image: PLACEHOLDER_IMAGES.gallery1, caption: "Our Cozy Interior" },
-    { image: PLACEHOLDER_IMAGES.gallery2, caption: "Fresh Pastries Daily" },
-    { image: PLACEHOLDER_IMAGES.gallery3, caption: "Expert Barista Skills" },
-    { image: PLACEHOLDER_IMAGES.gallery4, caption: "Premium Coffee Beans" },
-    { image: PLACEHOLDER_IMAGES.gallery5, caption: "Perfect Latte Art" },
-    { image: PLACEHOLDER_IMAGES.gallery6, caption: "Community Gathering" }
+    { image: gallery1Image, caption: "Our Cozy Interior" },
+    { image: gallery2Image, caption: "Fresh Pastries Daily" },
+    { image: gallery3Image, caption: "Expert Barista Skills" },
+    { image: gallery4Image, caption: "Premium Coffee Beans" },
+    { image: gallery5Image, caption: "Perfect Latte Art" },
+    { image: gallery6Image, caption: "Community Gathering" }
   ];
 
   return (
@@ -146,7 +142,7 @@ const About = () => {
               </p>
             </div>
             <div className="story-image">
-              <img src={PLACEHOLDER_IMAGES.story} alt="Cozy Cafe interior" />
+              <img src={storyImage} alt="Cozy Cafe interior" />
             </div>
           </div>
         </div>

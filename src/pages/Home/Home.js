@@ -218,3 +218,4 @@ const Home = () => {
   );
 }
 export default Home;
+export { coffeeImage, sandwichImage, matchaLatteImage };
