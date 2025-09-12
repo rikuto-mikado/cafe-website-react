@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaCoffee, FaLeaf, FaHeart, FaClock, FaMapMarkerAlt, FaStar } from 'react-icons/fa';
+import { FaCoffee, FaLeaf, FaHeart, FaClock, FaMapMarkerAlt, FaStar, FaShoppingCart } from 'react-icons/fa';
 import './Home.css';
+import '../Menu/Menu.css';
 import cafeBackground from '../../assets/cafe-background.jpg';
 import coffeeImage from '../../assets/coffee.jpg';
 import sandwichImage from '../../assets/sandwich.jpg';
@@ -16,6 +17,22 @@ const imageMap = {
 
 const Home = () => {
   const { popularItems } = menuData;
+
+  const renderTag = (tag) => {
+    const tagClasses = {
+      popular: 'tag-popular',
+      new: 'tag-new',
+      seasonal: 'tag-seasonal',
+      vegan: 'tag-vegan',
+      decaf: 'tag-decaf'
+    };
+
+    return (
+      <span key={tag} className={`menu-tag ${tagClasses[tag] || ''}`}>
+        {tag.charAt(0).toUpperCase() + tag.slice(1)}
+      </span>
+    );
+  };
 
   return (
     <div className="home">
@@ -106,22 +123,28 @@ const Home = () => {
             <p className="section-subtitle">Taste what makes us special</p>
           </div>
 
-          <div className="menu-grid">
+          <div className="menu-items-grid">
             {popularItems.map(item => (
-              <div key={item.id} className="menu-card">
-                <div className="menu-image">
+              <div key={item.id} className="menu-item">
+                <div className="menu-item-image">
                   <img src={imageMap[item.image]} alt={item.name} />
-                  <div className="rating">
-                    <FaStar className="star" />
-                    {item.rating}
-                  </div>
                 </div>
-                <div className="menu-content">
-                  <h3 className="menu-name">{item.name}</h3>
-                  <p className="menu-description">{item.description}</p>
-                  <div className="menu-footer">
-                    <span className="menu-price">{item.price}</span>
-                    <button className="add-to-cart-btn">Order Now</button>
+                <div className="menu-item-content">
+                  <div className="menu-item-header">
+                    <div>
+                      <h3 className="menu-item-name">{item.name}</h3>
+                    </div>
+                    <div className="menu-item-price">{item.price}</div>
+                  </div>
+                  <p className="menu-item-description">{item.description}</p>
+                  <div className="menu-item-footer">
+                    <div className="menu-item-tags">
+                      {item.tags && item.tags.map(tag => renderTag(tag))}
+                    </div>
+                    <button className="order-btn">
+                      <FaShoppingCart />
+                      Order Now
+                    </button>
                   </div>
                 </div>
               </div>

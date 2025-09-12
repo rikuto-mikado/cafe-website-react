@@ -75,10 +75,10 @@ const Header = () => {
                 </nav>
 
                 {/* Contact information */}
-                <div className="contact-info">
+                <Link to="/contact" className="contact-info">
                     <FaPhone className="contact-icon" />
-                    <span className="contact-text">03-0000-0000</span>
-                </div>
+                    <span className="contact-text">Contact Us</span>
+                </Link>
 
                 {/* Mobile menu button */}
                 <button
